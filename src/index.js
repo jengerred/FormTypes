@@ -1,10 +1,12 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import { Formik, Field, Form } from "formik";
+import "./App.css";
 
 const Basic = () => (
   <div>
-    <h1>Leave a Message</h1>
+    <h1>Contact Jennifer</h1>
+
     <Formik
       initialValues={{
         Name: "",
@@ -18,47 +20,90 @@ const Basic = () => (
         alert(JSON.stringify(values, null, 2));
       }}
     >
-      <Form>
-        <label htmlFor="Name">Name: </label>
-        <Field id="Name" name="Name" placeholder="Your Name" />
-        <div>_</div>
+      <Form align="center">
+        <label htmlFor="Name" class="Name">
+          Name:{" "}
+        </label>
+        <Field id="Name" name="Name" class="name" placeholder="Your Name" />
 
         {}
-        <div id="checkbox-group">Preferred Method Of Contact:</div>
-        <div role="group" aria-labelledby="checkbox-group">
-          <label>
-            <Field type="checkbox" name="checked" value="Phone" />
-            Phone
-          </label>
-          <label>
-            <Field type="checkbox" name="checked" value="Text" />
-            Text
-          </label>
-          <label>
-            <Field type="checkbox" name="checked" value="Email" />
-            Email
-          </label>
-          <label>
-            <Field type="checkbox" name="checked" value="Other" />
-            Other
-          </label>
+        <div id="checkbox-group" class="checkbox-head">
+          <h3>Preferred Method Of Contact:</h3>
+          <p>(Please choose at least one)</p>
+          <div class="checkbox-group">
+            <div>
+              <label>
+                <Field
+                  class="checkPhone"
+                  id="checkPhone"
+                  type="checkbox"
+                  name="checked"
+                  value="text"
+                />
+                Phone
+              </label>
+              <Field
+                class="phone"
+                type="phone"
+                name="phone"
+                placeholder="(555)555-5555"
+              />
+
+              <label>
+                <Field
+                  class="checkText"
+                  id="checkText"
+                  type="checkbox"
+                  name="checked"
+                  value="Text"
+                />
+                Text
+              </label>
+              <Field
+                class="text"
+                type="phone"
+                name="phone"
+                placeholder="(555)555-5555"
+              />
+            </div>
+
+            <div>
+              <label>
+                <Field
+                  class="checkEmail"
+                  id="checkEmail"
+                  type="checkbox"
+                  name="checked"
+                  value="Email"
+                />
+                Email
+              </label>
+              <Field
+                class="email"
+                type="email"
+                name="email"
+                placeholder="youremail@email.com"
+              />
+
+              <label>
+                <Field
+                  class="checkOther"
+                  id="checkOther"
+                  type="checkbox"
+                  name="checked"
+                  value=" "
+                />
+                Other
+              </label>
+              <Field class="other" type="text" name="other" placeholder=" " />
+            </div>
+          </div>
         </div>
-        <div>_</div>
 
-        <label htmlFor="phone"> Phone: </label>
-        <Field type="phone" name="phone" placeholder="#" />
-
-        <label htmlFor="text"> Text: </label>
-        <Field type="phone" name="phone" placeholder="#" />
-
-        <div>_</div>
-        <div>
-          <label htmlFor="email"> Email: </label>
-          <Field type="email" name="email" placeholder="youremail@email.com" />
-        </div>
-
-        <div>_</div>
-        <label htmlFor="text-area"> Message: </label>
+        <label htmlFor="text-area" class="message">
+          {" "}
+          Message:{" "}
+        </label>
 
         <Field
           component="textarea"
@@ -68,9 +113,12 @@ const Basic = () => (
           name="Message"
           required
         />
-
-        <div>_</div>
-        <button type="submit"> Submit</button>
+        <div>
+          <button type="submit" class="submit">
+            {" "}
+            Submit
+          </button>
+        </div>
       </Form>
     </Formik>
   </div>
