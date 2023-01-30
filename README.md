@@ -1,6 +1,6 @@
-## You can view my live page here: https://jengerred.netlify.app/
+## You can view my live page here: [Netlify] (https://jengerred.netlify.app/)
 
-## You can view my codesandbox page here: https://codesandbox.io/s/github/jengerred/FormTypes
+## You can view my codesandbox page here: [codesandbox] (https://codesandbox.io/s/github/jengerred/FormTypes)
 
 This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).
 
