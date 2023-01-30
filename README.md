@@ -1,5 +1,5 @@
 
-##### *--Copy and past links--* 
+##### --Copy and paste links below to view live page or codesandbox page-- 
 ### You can view my live page here:  ( https://jengerred.netlify.app/ )
 
 ### You can view my codesandbox page here: ( https://codesandbox.io/s/github/jengerred/FormTypes )
